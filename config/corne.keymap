@@ -146,10 +146,10 @@
             //                    | GUI | LWR | SPC |   | SPC | L2   | L1  |
 
             bindings = <
-&kp TAB                    &Hold_Tap LC(Q) Q  &Hold_Tap LC(W) W  &Hold_Tap LC(E) E            &Hold_Tap LC(R) R  &kp T                &kp Y                   &kp U                       &kp I                 &kp O               &kp P          &Hold_Tap BACKSPACE LEFT_BRACKET
-&kp LEFT_SHIFT             &Hold_Tap LC(A) A  &kp S              &Hold_Tap LC(D) D            &Hold_Tap LC(F) F  &Hold_Tap LC(G) G    &kp H                   &kp J                       &kp K                 &kp L               &kp SEMI       &kp SINGLE_QUOTE
-&Hold_Tap LCTRL LA(LSHFT)  &Hold_Tap LC(Z) Z  &Hold_Tap LC(X) X  &Hold_Tap LC(C) C            &Hold_Tap LC(V) V  &Hold_Tap LC(B) B    &kp N                   &kp M                       &TD_Dot_Comma         &TD_Apostraf_quote  &mt STAR FSLH  &kp ESC
-                                                                 &Hold_Tap LGUI LEFT_CONTROL  &kp LEFT_ALT       &kp SPACE            &HT_with_layer 3 ENTER  &HT_with_layer 2 BACKSPACE  &HT_with_layer 1 DEL
+&kp ESC                    &Hold_Tap LC(Q) Q  &Hold_Tap LC(W) W  &Hold_Tap LC(E) E   &Hold_Tap LC(R) R  &kp T                &kp Y                   &kp U                       &kp I                 &kp O               &kp P          &Hold_Tap BACKSPACE LEFT_BRACKET
+&kp LEFT_SHIFT             &Hold_Tap LC(A) A  &kp S              &Hold_Tap LC(D) D   &Hold_Tap LC(F) F  &Hold_Tap LC(G) G    &kp H                   &kp J                       &kp K                 &kp L               &kp SEMI       &kp SINGLE_QUOTE
+&Hold_Tap LCTRL LA(LSHFT)  &Hold_Tap LC(Z) Z  &Hold_Tap LC(X) X  &Hold_Tap LC(C) C   &Hold_Tap LC(V) V  &Hold_Tap LC(B) B    &kp N                   &kp M                       &TD_Dot_Comma         &TD_Apostraf_quote  &mt STAR FSLH  &kp RSHIFT
+                                                                 &Hold_Tap LGUI TAB  &kp LEFT_ALT       &kp SPACE            &HT_with_layer 3 ENTER  &HT_with_layer 2 BACKSPACE  &HT_with_layer 1 DEL
             >;
         };
 
