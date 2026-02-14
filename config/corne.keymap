@@ -98,7 +98,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <350>;
             flavor = "tap-preferred";
         };
 
@@ -116,6 +116,22 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <350>;
+        };
+    };
+
+    macros {
+        find_class: find_class {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(E) &kp HASH &kp SPACE>;
+            label = "FIND_CLASS";
+        };
+
+        find_method: find_method {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(E) &kp AT_SIGN &kp SPACE>;
+            label = "FIND_METHOD";
         };
     };
 
@@ -169,10 +185,10 @@
 
         my_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP_ARROW    &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans          &trans           &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans        &trans       &trans    &trans    &kp PG_UP  &kp UP_ARROW    &kp PAGE_DOWN    &trans   &trans
+&trans  &trans  &trans  &find_method  &find_class  &trans    &kp HOME  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
+&trans  &trans  &trans  &trans        &trans       &trans    &trans    &trans     &trans          &trans           &trans   &trans
+                        &trans        &trans       &trans    &trans    &trans     &trans
             >;
         };
     };
