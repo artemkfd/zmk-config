@@ -18,47 +18,95 @@
 
         OpenParenthesis {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <6 7>;
+            key-positions = <4 5>;
         };
 
         OpenBrace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <18 19>;
+            key-positions = <16 17>;
         };
 
         OpenBracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <30 31>;
+            key-positions = <30 31 28 29>;
         };
 
         CloseParenthasis {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <8 7>;
+            key-positions = <7 6>;
         };
 
         CloseBrace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <19 20>;
+            key-positions = <19 18>;
         };
 
         CloseBracket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <31 32>;
+            key-positions = <31 30>;
         };
 
         LessThan {
             bindings = <&kp LESS_THAN>;
-            key-positions = <3 4>;
+            key-positions = <3 2>;
         };
 
         GreatherThan {
             bindings = <&kp GREATER_THAN>;
-            key-positions = <4 5>;
+            key-positions = <4 3>;
         };
 
         Enter {
             bindings = <&kp ENTER>;
             key-positions = <38 39>;
+        };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <7 8>;
+        };
+
+        pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <31 32>;
+        };
+
+        exclemation {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <19 20>;
+        };
+    };
+
+    behaviors {
+        TD_Dot_Comma: TD_Dot_Comma {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_DOT_COMMA";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COMMA>;
+        };
+
+        TD_Apostraf_quote: TD_Apostraf_quote {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_APOSTRAF_QUOTE";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp DOUBLE_QUOTES>;
+        };
+
+        Hold_Tap: Hold_Tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            bindings = <&mt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            flavor = "tap-preferred";
+        };
+
+        TD_Space_Del: TD_Space_Del {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SPACE_DEL";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp DEL>;
         };
     };
 
@@ -73,10 +121,10 @@
             //                    | GUI | LWR | SPC |   | SPC | L2   | L1  |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E     &kp R         &kp T        &kp Y      &kp U  &kp I          &kp O                  &kp P          &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D     &kp F         &kp G        &kp H      &kp J  &kp K          &kp L                  &kp SEMI       &kp ENTER
-&kp LCTRL       &kp Z  &kp X  &kp C     &kp V         &kp B        &kp N      &kp M  &mt COMMA DOT  &mt SQT DOUBLE_QUOTES  &mt STAR FSLH  &kp ESC
-                              &kp LGUI  &kp LEFT_ALT  &kp SPACE    &kp SPACE  &mo 2  &mo 1
+&kp TAB                    &Hold_Tap LC(Q) Q  &Hold_Tap LC(W) W  &Hold_Tap LC(E) E  &Hold_Tap LC(R) R  &kp T                &kp Y      &kp U  &kp I          &kp O               &kp P          &kp BSPC
+&kp LEFT_SHIFT             &Hold_Tap LC(A) A  &kp S              &Hold_Tap LC(D) D  &Hold_Tap LC(F) F  &Hold_Tap LC(G) G    &kp H      &kp J  &kp K          &kp L               &kp SEMI       &kp ENTER
+&Hold_Tap LCTRL LA(LSHFT)  &Hold_Tap LC(Z) Z  &Hold_Tap LC(X) X  &Hold_Tap LC(C) C  &Hold_Tap LC(V) V  &Hold_Tap LC(B) B    &kp N      &kp M  &TD_Dot_Comma  &TD_Apostraf_quote  &mt STAR FSLH  &kp ESC
+                                                                 &kp LGUI           &kp LEFT_ALT       &kp SPACE            &kp SPACE  &mo 2  &mo 1
             >;
         };
 
@@ -88,10 +136,10 @@
             //                    |     |     | SPC |   | SPC |     |     |
 
             bindings = <
-&sys_reset  &trans  &trans    &trans    &trans     &trans       &trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0  &trans
-&trans      &trans  &trans    &kp UP    &trans     &trans       &trans   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
-&trans      &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans       &trans   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
-                              &trans    &trans     &kp SPACE    &kp SPACE  &trans        &trans
+&sys_reset  &trans  &trans    &trans    &trans     &trans           &kp PLUS       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0  &trans
+&trans      &trans  &kp HOME  &kp UP    &kp END    &kp PG_UP        &kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
+&trans      &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN    &kp EQUAL      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
+                              &trans    &trans     &kp SPACE        &TD_Space_Del  &trans        &trans
             >;
         };
 
@@ -103,19 +151,18 @@
             //                    | GUI |     | SPC |   | SPC |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL     &kp AT              &kp HASH            &kp AMPERSAND  &kp PRCNT           &kp CARET  &kp DOLLAR  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &kp C_MUTE   &kp C_VOLUME_DOWN   &kp C_VOLUME_UP     &kp LESS_THAN  &kp GREATER_THAN    &kp MINUS  &kp EQUAL   &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans       &trans              &trans              &trans         &trans              &kp UNDER  &kp PLUS    &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                            &kp LGUI            &trans         &kp SPACE           &kp SPACE    &trans      &kp RALT
+&kp TAB    &kp EXCL    &kp AT             &kp HASH         &kp AMPERSAND  &kp PRCNT           &kp CARET  &kp DOLLAR  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&kp LCTRL  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LESS_THAN  &kp GREATER_THAN    &kp MINUS  &kp EQUAL   &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans      &trans             &trans           &trans         &trans              &kp UNDER  &kp PLUS    &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                          &kp LGUI         &trans         &kp SPACE           &kp SPACE  &trans      &kp RALT
             >;
         };
     };
 };
 
-
 //For new Layers
-    // -----------------------------------------------------------------------------------------
-    // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-    // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-    // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-    //                    |     |     |     |   |     |     |     |
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
