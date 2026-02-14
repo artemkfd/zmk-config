@@ -168,14 +168,14 @@
         start_test: start_test {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SEMICOLON) &kp LC(C)>;
+            bindings = <&kp LC(SEMICOLON) &kp C>;
             label = "START_TEST";
         };
 
         start_debuging: start_debuging {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SEMICOLON) &kp LS(LC(C))>;
+            bindings = <&kp LC(SEMICOLON) &kp LC(C)>;
             label = "START_DEBUGING";
         };
     };
