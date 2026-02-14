@@ -95,13 +95,11 @@
         Hold_Tap: Hold_Tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
-            bindings = <&mt>, <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             flavor = "tap-preferred";
-            hold-while-undecided;
-            hold-trigger-on-release;
         };
 
         TD_Space_Del: TD_Space_Del {
