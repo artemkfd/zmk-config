@@ -130,6 +130,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <350>;
             flavor = "tap-preferred";
+            hold-trigger-on-release;
         };
 
         TD_Space_Del: TD_Space_Del {
@@ -162,6 +163,20 @@
             #binding-cells = <0>;
             bindings = <&kp LC(E) &kp AT_SIGN &kp SPACE>;
             label = "FIND_METHOD";
+        };
+
+        start_test: start_test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SEMICOLON) &kp LC(C)>;
+            label = "START_TEST";
+        };
+
+        start_debuging: start_debuging {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SEMICOLON) &kp LS(LC(C))>;
+            label = "START_DEBUGING";
         };
     };
 
@@ -215,10 +230,10 @@
 
         my_layer {
             bindings = <
-&trans  &trans  &trans  &trans        &trans       &trans    &trans    &kp PG_UP  &kp UP_ARROW    &kp PAGE_DOWN    &trans   &trans
-&trans  &trans  &trans  &find_method  &find_class  &trans    &kp HOME  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
-&trans  &trans  &trans  &trans        &trans       &trans    &trans    &trans     &trans          &trans           &trans   &trans
-                        &trans        &trans       &trans    &trans    &trans     &trans
+&trans  &trans  &trans  &trans        &trans       &start_test        &trans    &kp PG_UP  &kp UP_ARROW    &kp PAGE_DOWN    &trans   &trans
+&trans  &trans  &trans  &find_method  &find_class  &start_debuging    &kp HOME  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
+&trans  &trans  &trans  &trans        &trans       &trans             &trans    &trans     &trans          &trans           &trans   &trans
+                        &trans        &trans       &trans             &trans    &trans     &trans
             >;
         };
     };
