@@ -28,7 +28,7 @@
 
         OpenBracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <30 31 28 29>;
+            key-positions = <28 29>;
         };
 
         CloseParenthasis {
