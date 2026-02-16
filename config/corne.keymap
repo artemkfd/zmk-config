@@ -178,6 +178,20 @@
             bindings = <&kp LC(SEMICOLON) &kp LC(C)>;
             label = "START_DEBUGING";
         };
+
+        shell_plus: shell_plus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp Y &kp T &kp H &kp O &kp N &kp SPACE &kp M &kp A &kp N &kp A &kp G &kp E &kp DOT &kp P &kp Y &kp SPACE &kp S &kp H &kp E &kp L &kp L &kp UNDER &kp P &kp L &kp U &kp S>;
+            label = "SHELL_PLUS";
+        };
+
+        manage_py: manage_py {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp P &kp Y &kp T &kp H &kp O &kp N &kp SPACE &kp M &kp A &kp N &kp A &kp G &kp E &kp DOT &kp P &kp Y &kp SPACE>;
+            label = "MANAGE_PY";
+        };
     };
 
     keymap {
@@ -230,7 +244,7 @@
 
         my_layer {
             bindings = <
-&trans  &trans  &trans  &trans        &trans       &start_test        &trans    &kp PG_UP  &kp UP_ARROW    &kp PAGE_DOWN    &trans   &trans
+&trans  &trans  &trans  &shell_plus   &manage_py   &start_test        &trans    &kp PG_UP  &kp UP_ARROW    &kp PAGE_DOWN    &trans   &trans
 &trans  &trans  &trans  &find_method  &find_class  &start_debuging    &kp HOME  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
 &trans  &trans  &trans  &trans        &trans       &trans             &trans    &trans     &trans          &trans           &trans   &trans
                         &trans        &trans       &trans             &trans    &trans     &trans
