@@ -247,16 +247,16 @@
 &trans  &trans         &trans            &shell_plus       &manage_py              &start_test                &trans    &kp PG_UP  &kp UP_ARROW    &kp PAGE_DOWN    &trans   &trans
 &trans  &kp LC(B)      &kp LC(LS(P))     &find_method      &find_class             &start_debuging            &kp HOME  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
 &trans  &kp LC(GRAVE)  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(RIGHT_ARROW))    &trans    &trans     &trans          &trans           &trans   &trans
-                                         &trans            &trans                  &trans                     &trans    &trans     &trans
+                                         &trans            &trans                  &mo 4                      &trans    &trans     &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F11  &kp F12  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans     &trans  &trans  &trans
             >;
         };
     };
