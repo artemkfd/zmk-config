@@ -244,10 +244,10 @@
 
         my_layer {
             bindings = <
-&trans  &trans  &trans               &shell_plus          &manage_py              &start_test                &trans    &kp PG_UP  &kp UP_ARROW    &kp PAGE_DOWN    &trans   &trans
-&trans  &trans  &kp LC(LS(P))        &find_method         &find_class             &start_debuging            &kp HOME  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
-&trans  &trans  &kp LC(KP_NUMBER_1)  &kp LC(KP_NUMBER_2)  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(RIGHT_ARROW))    &trans    &trans     &trans          &trans           &trans   &trans
-                                     &trans               &trans                  &trans                     &trans    &trans     &trans
+&trans  &trans  &trans            &shell_plus       &manage_py              &start_test                &trans    &kp PG_UP  &kp UP_ARROW    &kp PAGE_DOWN    &trans   &trans
+&trans  &trans  &kp LC(LS(P))     &find_method      &find_class             &start_debuging            &kp HOME  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
+&trans  &trans  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(RIGHT_ARROW))    &trans    &trans     &trans          &trans           &trans   &trans
+                                  &trans            &trans                  &trans                     &trans    &trans     &trans
             >;
         };
 
