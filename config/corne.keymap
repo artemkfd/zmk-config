@@ -105,6 +105,16 @@
             bindings = <&kp COMMA>;
             key-positions = <27 26>;
         };
+
+        double_quotes {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <15 14>;
+        };
+
+        single_quote {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <13 14>;
+        };
     };
 
     behaviors {
