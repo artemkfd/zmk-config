@@ -247,7 +247,7 @@
             bindings = <
 &kp TAB    &kp EXCL              &kp AT          &kp HASH      &kp AMPERSAND     &kp PRCNT           &kp CARET  &kp DOLLAR  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &kp C_MEDIA_COMPUTER  &kp C_MUTE      &kp C_VOL_DN  &kp C_VOLUME_UP   &kp GREATER_THAN    &kp MINUS  &kp EQUAL   &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kp K_MENU            &kp K_PREVIOUS  &kp K_NEXT    &kp K_PLAY_PAUSE  &trans              &kp UNDER  &kp PLUS    &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+&kp LSHFT  &kp K_MENU            &kp K_PREVIOUS  &kp K_NEXT    &kp K_PLAY_PAUSE  &kp LS(LEFT_ALT)    &kp UNDER  &kp PLUS    &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                                                  &kp LGUI      &trans            &kp SPACE           &kp SPACE  &trans      &kp RALT
             >;
         };
